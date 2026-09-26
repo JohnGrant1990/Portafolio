@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* --- VARIABLES DE COLOR PALEONTOLÓGICO --- */
+:root {
+    --color-fosil: #EAE3D2;      /* Hueso/Pergamino para fondos principales */
+    --color-arena: #C19A6B;      /* Arena para secciones secundarias */
+    --color-arcilla: #8B5A2B;    /* Terracota para bordes y botones */
+    --color-jurasico: #2C4C3B;   /* Verde oscuro para títulos y navegación */
+    --color-texto: #3E2723;      /* Marrón oscuro/carbón para el texto (no cansa la vista) */
+}
+
+@font-face {
+    font-family: 'Jurassic Park';
+    src: url('../TIPOGRAFIA/Jurassic\ Park.ttf');
+}
+
+body {
+    font-size: 0px;
+    font-family: 'Jurassic Park', sans-serif;
+    background-color: var(--color-fosil);
+    color: var(--color-texto);
+}
+
+/* --- ENCABEZADO Y HERO --- */
+header {
+    background: url(../IMAGENES/Cp6sfyLXgAEYZqA.jpg) no-repeat center center;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido {
+    min-width: 320px;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 87vh;
+}
+
+header h1 {
+    font-size: 6rem;
+    color: var(--color-jurasico);
+    margin-top: 50px;
+    /* Sombra color hueso para que resalte sobre la imagen de fondo */
+    text-shadow: 2px 2px 0px var(--color-fosil), -1px -1px 0px var(--color-fosil);
+    text-align: center;
+}
+
+header span {
+    font-size: 3.5rem;
+    color: var(--color-texto);
+    text-shadow: 2px 2px 0px var(--color-fosil);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+/* --- NAVEGACIÓN --- */
+nav {
+    background-color: var(--color-jurasico);
+    min-height: 13vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 4px solid var(--color-arcilla);
+}
+
+nav a {
+    flex: 1;
+    min-width: 140px;
+    font-size: 2.2rem;
+    color: var(--color-fosil);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 13vh;
+    border: 0.5px solid rgba(234, 227, 210, 0.2); /* Borde sutil color fósil */
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-texto);
+    background-color: var(--color-arena);
+}
+
+/* --- SECCIÓN EL INVESTIGADOR (SOBRE MÍ) --- */
+#sobre-mi, #descripcion {
+    padding: 70px 20px;
+    /* Degradado de arena a fósil */
+    background: radial-gradient(circle, var(--color-arena), var(--color-fosil));
+}
+
+#sobre-mi h1, #descripcion h1, section h2 {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--color-jurasico);
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+#describir {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#describir img {
+    width: 350px;
+    height: 350px;
+    max-width: 100%;
+    border-radius: 100%;
+    border: 5px solid var(--color-jurasico);
+    object-fit: cover;
+    box-shadow: 0px 0px 15px rgba(62, 39, 35, 0.4);
+}
+
+#describir figcaption {
+    width: 45%;
+    font-size: 1.8rem;
+    color: var(--color-texto);
+    line-height: 2.2rem;
+    min-width: 280px;
+    font-family: Arial, sans-serif; /* Mejor legibilidad */
+}
+
+#especies {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    background: rgba(234, 227, 210, 0.6); /* Color fósil semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--color-arcilla);
+}
+
+#especies h3 {
+    font-size: 2.5rem;
+    color: var(--color-jurasico);
+    margin-bottom: 10px;
+}
+
+#especies p, #especies ul {
+    font-size: 1.5rem;
+    color: var(--color-texto);
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+}
+
+#especies ul {
+    margin-left: 30px;
+}
+
+/* --- SECCIÓN PROYECTOS (ESPECÍMENES) --- */
+#proyectos {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, var(--color-fosil) 0%, var(--color-arena) 100%);
+    border-top: 4px dashed var(--color-arcilla); /* Borde estilo ruta de mapa */
+}
+
+#proyectos h2 {
+    color: var(--color-jurasico);
+    margin-bottom: 50px;
+}
+
+.grid-proyectos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.tarjeta-proyecto {
+    background: var(--color-fosil);
+    border: 2px solid var(--color-arcilla);
+    border-radius: 10px;
+    width: 30%;
+    min-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(62, 39, 35, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-jurasico);
+    box-shadow: 0 8px 20px rgba(62, 39, 35, 0.4);
+}
+
+.tarjeta-proyecto img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 4px solid var(--color-arcilla);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.info-proyecto h3 {
+    font-size: 2.2rem;
+    color: var(--color-jurasico);
+    margin-bottom: 10px;
+}
+
+.info-proyecto p {
+    font-size: 1.3rem;
+    color: var(--color-texto);
+    line-height: 1.6rem;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif; 
+}
+
+.btn-enlace {
+    display: inline-block;
+    font-family: 'Jurassic Park', sans-serif;
+    font-size: 1.8rem;
+    background-color: var(--color-arcilla);
+    color: var(--color-fosil);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-enlace:hover {
+    background-color: var(--color-jurasico);
+    color: var(--color-fosil);
+}
+
+
+/* --- SECCIÓN CONTACTO --- */
+#contacto {
+    padding: 60px 20px;
+    border-top: 4px dashed var(--color-arcilla);
+    
+    
+    background-image: linear-gradient(
+        rgba(44, 76, 59, 0.85), 
+        rgba(44, 76, 59, 0.85)
+    ), url('../IMAGENES/Background04.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+
+#contacto h2 {
+    color: var(--color-fosil); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+.form-contacto {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    background: rgba(234, 227, 210, 0.95); 
+    padding: 30px;
+    border-radius: 10px;
+    border: 3px solid var(--color-arena);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.form-contacto label {
+    font-size: 1.8rem;
+    color: var(--color-jurasico);
+}
+
+.form-contacto input, 
+.form-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    border: 2px solid var(--color-arena);
+    background-color: #fff;
+    color: var(--color-texto);
+    border-radius: 5px;
+}
+
+.form-contacto input:focus, 
+.form-contacto textarea:focus {
+    outline: none;
+    border-color: var(--color-jurasico);
+    box-shadow: 0 0 8px rgba(44, 76, 59, 0.5);
+}
+
+.form-contacto button {
+    font-family: 'Jurassic Park', sans-serif;
+    font-size: 2.2rem;
+    background-color: var(--color-arcilla);
+    color: var(--color-fosil);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.form-contacto button:hover {
+    background-color: var(--color-jurasico);
+    transform: scale(1.02); 
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    background-color: var(--color-jurasico);
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 5px solid var(--color-arcilla);
+}
+
+footer p {
+    font-size: 1.8rem;
+    color: var(--color-fosil);
+    margin: 5px 0;
+}

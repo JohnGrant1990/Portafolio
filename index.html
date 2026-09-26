@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Juan Zaragoza">
+    <meta name="description" content="Portafolio personal de Juan Zaragoza Desarrollador Web con espíritu de paleontólogo digital.">
+    <meta name="keywords" content="Portafolio, Desarrollador, Paleontología Digital, HTML5, CSS3, Proyectos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="FAVICON/Logo02.ico">
+    <title>Portafolio Jurásico</title>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="contenido">
+        <section id="logo">
+            <h1>EXPEDICION WEB</h1>
+            <span>Bitacora de un Desarrollador</span>
+        </section>
+        <nav>
+            <a href="#sobre-mi">El Investigador</a>
+            <a href="#proyectos">Especimenes (Proyectos)</a>
+            <a href="#contacto">Contacto Base</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección: El Investigador (Sobre Mí + Académico) -->
+        <section id="sobre-mi" class="contenido">
+            <h1>Perfil del Investigador</h1>
+            <figure id="describir">
+                <img src="IMAGENES/22fed33f-a352-4f5a-8d30-a31e5e0c781d.png" alt="Fotografía del investigador">
+                <figcaption>
+                    Saludos, soy <strong>Juan Zaragoza</strong>. Me considero un paleontólogo del código: 
+                    excavo en busca de la mejor lógica, estructuro fósiles de información y doy vida a interfaces extintas. 
+                    Me apasiona el desarrollo web y descubrir nuevas tecnologías.
+                </figcaption>
+            </figure>
+
+            <article id="especies">
+                <div>
+                    <h3>Registro Academico y Entrenamientos</h3>
+                    <p><strong>Licenciatura / Ingeniería en:</strong> Desarrollo de Software Multiplataforma (2025 - Presente)</p>
+                    <p><strong>Cursos Base:</strong></p>
+                    <ul>
+                        <li>Desarrollo de Estructuras Semánticas (HTML5)</li>
+                        <li>Estilismo y Evolución Visual (CSS3)</li>
+                        <li>Lógica y Supervivencia (JavaScript Básico)</li>
+                        <li>Programacion Orientada a Objetos</li>
+                        <li>Arduino</li>
+                        <li>Mantenimiento de Computadoras</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección: Especímenes (Proyectos) -->
+        <section id="proyectos" class="contenido">
+            <h2>Especimenes Descubiertos</h2>
+            <div class="grid-proyectos">
+                <!-- Proyecto 1 -->
+                <article class="tarjeta-proyecto">
+                    <img src="IMAGENES/be122305da9dceca63474beac2c1bf0b.gif" alt="Vista previa del Proyecto 1">
+                    <div class="info-proyecto">
+                        <h3>Fosil 1: Jurassic Park</h3>
+                        <p>
+                            Una pagina hecha como si Jurassic Park fuera un destino turistico real.
+                            Mostrando la historia de InGen, personal del parque, nedidas de seguridad,
+                            atracciones, areas de descanso y obviamente, los dinosaurios.
+                        </p>
+                        <a href="https://johngrant1990.github.io/JurassicPark/" target="_blank" class="btn-enlace">Investigar Especimen</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="tarjeta-proyecto">
+                    <img src="IMAGENES/75ff56044cb66f4c4266140125588640.jpg" alt="Vista previa del Proyecto 2">
+                    <div class="info-proyecto">
+                        <h3>Fosil 2: The X-Files</h3>
+                        <p>
+                            Una pagina dedicada a los diferentes seres paranormales que acechan en el mundo.
+                            En ella se recopilan testimonios, lugares de avistamientos, el reportar un avistamiento y 
+                            obviamente, una descripcion de los seres en cuestion.
+                        </p>
+                        <a href="https://johngrant1990.github.io/The-X-Files/" target="_blank" class="btn-enlace">Investigar Especimen</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="tarjeta-proyecto">
+                    <img src="IMAGENES/c52ca37efd43cf92d4be391111f1503b.gif" alt="Vista previa del Proyecto 3">
+                    <div class="info-proyecto">
+                        <h3>Fosil 3: Jurassic Arcade</h3>
+                        <p>
+                            Una pagina muy sencilla donde se recopilan diferentes juegos clasicos como el ajedrez, memorama, 
+                            buscaminas, etc. Ademas de dos juegos extra si presionas los emojis de dinosaurios.
+                        </p>
+                        <a href="https://johngrant1990.github.io/Jurassic-Arcade/" target="_blank" class="btn-enlace">Investigar Especimen</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección: Formulario de Contacto -->
+        <section id="contacto" class="contenido">
+            <h2>Transmision a la Base</h2>
+            <form action="#" method="POST" class="form-contacto">
+                <label for="nombre">Nombre del explorador:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="correo">Frecuencia de contacto (Email):</label>
+                <input type="email" id="correo" name="correo" placeholder="tu@email.com" required>
+
+                <label for="mensaje">Reporte de descubrimiento (Mensaje):</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+                <button type="submit">Enviar Coordenadas</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="contenido">
+        <p>&copy; 2026 Juan Manuel Zaragoza Alvarez. Archivos clasificados.</p>
+    </footer>
+
+</body>
+</html>
